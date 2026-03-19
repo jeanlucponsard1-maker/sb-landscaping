@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="S & B Landscaping Supply - Premium landscaping supplies in Parkland, FL. Fresh sod, mulch, rocks, plants, and trees for contractors and homeowners.">
+    <meta name="keywords" content="landscaping supply, Parkland FL, sod, mulch, decorative rocks, plants, trees, landscaping materials">
+    <title>S & B Landscaping Supply | Premium Landscaping Materials in Parkland, FL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #7a9b76;
+            --earth-brown: #8b6f47;
+            --terracotta: #c87941;
+            --soft-gold: #d4a574;
+            --cream: #faf8f5;
+            --off-white: #f5f3ef;
+            --charcoal: #2c2c2c;
+            --light-sage: #e8efe7;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        header.scrolled {
+            background: rgba(45, 80, 22, 0.98);
+            padding: 0.3rem 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        header.scrolled .logo {
+            color: white;
+        }
+
+        header.scrolled .logo svg {
+            fill: var(--soft-gold);
+        }
+
+        header.scrolled .nav-links a {
+            color: white;
+        }
+
+        header.scrolled .nav-links a:hover {
+            color: var(--soft-gold);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--forest-green);
+            font-family: 'Playfair Display', serif;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            fill: var(--sage-green);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--forest-green);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--soft-gold);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--soft-gold), var(--terracotta));
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 165, 116, 0.4);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--forest-green);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            height: 90vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.75), rgba(122, 155, 118, 0.65)),
+                        url('https://www.sblandscapesupply.com/wp-content/uploads/2021/06/Landscape-Pros-Management_Major-Benefits-of-Residential-Landscaping_IMAGE1-1.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 2rem;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1.1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--soft-gold), var(--terracotta));
+            color: white;
+            box-shadow: 0 6px 25px rgba(212, 165, 116, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(212, 165, 116, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--sage-green);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-specs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.95), rgba(122, 155, 118, 0.95));
+            color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .product-card:hover .product-specs {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .product-specs h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--soft-gold);
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .spec-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .spec-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: white;
+        }
+
+        .product-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--light-sage), var(--sage-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(45, 80, 22, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .product-card:hover .product-image::after {
+            background: rgba(45, 80, 22, 0);
+        }
+
+        .product-image svg {
+            display: none;
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-content h3 {
+            font-size: 1.8rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+
+        .product-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .learn-more {
+            color: var(--soft-gold);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .learn-more:hover {
+            gap: 1rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, var(--light-sage), var(--off-white));
+            padding: 100px 2rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .benefit-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            color: var(--forest-green);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--forest-green);
+            color: white;
+            padding: 100px 2rem;
+        }
+
+        .testimonials .section-header h2 {
+            color: white;
+        }
+
+        .testimonials .section-header p {
+            color: var(--light-sage);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stars {
+            color: var(--soft-gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--soft-gold);
+        }
+
+        .testimonial-role {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--off-white);
+            padding: 100px 2rem;
+        }
+
+        /* Sod Calculator */
+        .sod-calculator {
+            background: linear-gradient(135deg, var(--forest-green), var(--sage-green));
+            padding: 100px 2rem;
+            color: white;
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 25px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator-container h3 {
+            color: var(--forest-green);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .calc-input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calc-input-group label {
+            color: var(--forest-green);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .calc-input-group input {
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .calc-input-group input:focus {
+            outline: none;
+            border-color: var(--sage-green);
+        }
+
+        .calculate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--soft-gold), var(--terracotta));
+            color: white;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(212, 165, 116, 0.4);
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(212, 165, 116, 0.5);
+        }
+
+        .calculator-result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--light-sage), var(--off-white));
+            border-radius: 15px;
+            display: none;
+        }
+
+        .calculator-result.show {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(122, 155, 118, 0.2);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--forest-green);
+        }
+
+        .result-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: var(--forest-green);
+            font-size: 1.2rem;
+        }
+
+        /* Service Area Section */
+        .service-area {
+            background: var(--cream);
+            padding: 80px 2rem;
+        }
+
+        /* About Us Section */
+        .about-section {
+            background: white;
+            padding: 100px 2rem;
+        }
+
+        .about-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-story {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            position: sticky;
+            top: 120px;
+        }
+
+        .about-text h3 {
+            color: var(--forest-green);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-feature {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--light-sage);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .about-feature:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-feature .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .about-feature .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .about-feature h4 {
+            color: var(--forest-green);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-feature p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 968px) {
+            .about-story {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        .city-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sage-green);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .city-card svg {
+            width: 40px;
+            height: 40px;
+            fill: var(--sage-green);
+            margin-bottom: 0.8rem;
+        }
+
+        .city-card h4 {
+            color: var(--forest-green);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .city-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--forest-green);
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .info-content h4 {
+            font-size: 1.1rem;
+            color: var(--forest-green);
+            margin-bottom: 0.3rem;
+        }
+
+        .info-content p {
+            color: #666;
+        }
+
+        .info-content a:hover {
+            color: var(--forest-green);
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sage-green);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, var(--soft-gold), var(--terracotta));
+            color: white;
+            padding: 1.1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(212, 165, 116, 0.4);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(212, 165, 116, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--forest-green);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--soft-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--soft-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--soft-gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 300px;
+                background: white;
+                flex-direction: column;
+                padding: 5rem 2rem;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .products-grid,
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-container {
+                padding: 2rem;
+            }
+
+            .cities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile Floating Action Buttons */
+        .mobile-fab-container {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .fab-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .fab-call {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        .fab-directions {
+            background: linear-gradient(135deg, #4285F4, #34A853);
+        }
+
+        .fab-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .fab-button svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        @media (max-width: 968px) {
+            .mobile-fab-container {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l8 3.6v8.72c0 4.46-3.02 8.63-7.5 9.73-4.48-1.1-7.5-5.27-7.5-9.73V7.78l7.5-3.6z"/>
+                    <path d="M12 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zm0 6.5c-2.03 0-3.89-.78-5.28-2.05l1.18-1.18C9.03 15.9 10.45 16.5 12 16.5s2.97-.6 4.1-1.73l1.18 1.18C15.89 17.22 14.03 18 12 18z"/>
+                </svg>
+                S & B Landscaping
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Products & Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact" class="cta-button">Get a Quote</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Landscaping Supplies for Contractors & Homeowners</h1>
+            <p>Serving Parkland, FL with quality sod, mulch, rocks, plants, and trees</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">Explore Our Products</a>
+                <a href="#contact" class="btn-secondary">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="section-header">
+            <h2>Our Products & Services</h2>
+            <p>Premium quality landscaping materials delivered fresh to your project</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Lox-sod.jpg') center/cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Fresh Sod & Grass</h3>
+                    <p>Premium quality sod delivered fresh daily. Multiple grass types available for Florida's climate.</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="product-specs">
+                    <h4>Quick Specs</h4>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>St. Augustine - Best for Shade</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Delivered Fresh Daily</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>450 sq ft per pallet</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Same-day delivery available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/2fcbfa90c21a651eeaa36421237453ac.png') center/cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Mulch & Soil</h3>
+                    <p>Red, natural oak, and dark mulch varieties. Premium topsoil and soil amendments.</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="product-specs">
+                    <h4>Quick Specs</h4>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Multiple colors available</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Weed suppression</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Moisture retention</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Bulk pricing available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Stones.jpg') center/cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Decorative Rocks & Stones</h3>
+                    <p>Cap rock, river rock, and landscape stones. Beautiful natural materials for any project.</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="product-specs">
+                    <h4>Quick Specs</h4>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Cap rock for pathways</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>River rock decorative</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Low maintenance</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Various sizes & colors</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Yardtrees.jpg') center/cover;">
+                </div>
+                <div class="product-content">
+                    <h3>Plants & Trees</h3>
+                    <p>Wide selection of annuals, perennials, tropical plants. Palm trees, shade trees from 3-15 gallons.</p>
+                    <a href="#contact" class="learn-more">Learn More →</a>
+                </div>
+                <div class="product-specs">
+                    <h4>Quick Specs</h4>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Palm trees 3-15 gallon</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Florida-native species</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Expert planting advice</span>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <span>Seasonal annuals</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="section-header">
+            <h2>Why Choose S & B Landscaping Supply</h2>
+            <p>Trusted by contractors and homeowners across Parkland</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 18.5a1.5 1.5 0 0 1-1 1.415V21a1 1 0 0 1-2 0v-1.085a1.5 1.5 0 1 1 3-1.415zM14 9h2V6h3V4H9v2h3v3h2zM8 17.5A1.5 1.5 0 1 1 6.5 16 1.5 1.5 0 0 1 8 17.5zm-4-7A1.5 1.5 0 1 1 2.5 9 1.5 1.5 0 0 1 4 10.5z"/>
+                        <path d="M20 8h-3V4H7v4H4c-1.1 0-2 .9-2 2v10h20V10c0-1.1-.9-2-2-2zM7 6h10v2H7V6zm13 12H4v-6h16v6z"/>
+                    </svg>
+                </div>
+                <h3>Easy Delivery</h3>
+                <p>Single items to full truck loads delivered to your site. Convenient scheduling.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h3>Quality Materials</h3>
+                <p>Fresh products delivered daily. Premium selection you can trust for every project.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                </div>
+                <h3>Expert Staff</h3>
+                <p>Knowledgeable team ready to help with product selection and project guidance.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                    </svg>
+                </div>
+                <h3>Competitive Pricing</h3>
+                <p>Best value for contractors and homeowners. Volume discounts available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-header">
+            <h2>Our Materials Gallery</h2>
+            <p>See the quality that sets us apart</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Lox-sod.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Fresh Sod Rolls</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/2fcbfa90c21a651eeaa36421237453ac.png') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Premium Mulch</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Stones.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Decorative Rocks</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/shrubs-plants.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Shrubs & Plants</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Yardtrees.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Palm Trees</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/cap001.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Cap Rock</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/06/Gal-flowers-03.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Colorful Flowers</h4>
+                </div>
+            </div>
+            <div class="gallery-item" style="background: url('https://www.sblandscapesupply.com/wp-content/uploads/2021/07/Gal-trees-04.jpg') center/cover;">
+                <div class="gallery-overlay">
+                    <h4>Trees & Landscaping</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2>About S & B Landscaping Supply</h2>
+            <p>Family owned since 2002, serving South Florida with pride</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-story">
+                <div class="about-image">
+                    <img src="https://www.sblandscapesupply.com/wp-content/uploads/2021/06/Header-pic01-1024x682.jpg" alt="S&B Landscaping Supply Location" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                </div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Since 2002, S & B Landscaping Supply has been the premier choice for landscaping contractors and homeowners throughout South Florida. What started as a small family business has grown into the <strong>largest supplier of landscaping materials</strong> for South Florida landscape contractors, with the best selection of decorative stone and cap rock in the region.</p>
+                    
+                    <p>Located at <strong>7100 Loxahatchee Road in Parkland, Florida</strong>, we've built our reputation on three core principles: quality products, reliable service, and competitive pricing. Our convenient hours are designed to serve you when you need us most.</p>
+                    
+                    <h3 style="margin-top: 2rem;">Why Contractors Choose Us</h3>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Contractor Specialty</h4>
+                                <p>We understand the needs of professional landscapers and offer wholesale pricing for bulk orders.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Fresh Products Daily</h4>
+                                <p>Our sod is delivered fresh every day, ensuring the highest quality for your landscaping projects.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Homeowners Welcome</h4>
+                                <p>Whether you're a professional or DIY enthusiast, we provide the same quality service and products.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Expert Guidance</h4>
+                                <p>Our knowledgeable staff can help you select the right materials for your specific project needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem;">Our Commitment</h3>
+                    <p>We're committed to providing the highest quality landscaping materials at competitive prices. From single items to full truckloads, we deliver excellence every time. Our wide selection includes everything you need: fresh sod, premium mulch, decorative rocks and stones, beautiful plants and trees, and specialty items like cap rock.</p>
+                    
+                    <p><strong>Contact us today</strong> and experience the S & B difference. We're here to help bring your landscaping vision to life!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sod Calculator Section -->
+    <section class="sod-calculator">
+        <div class="section-header">
+            <h2 style="color: white;">Sod Calculator</h2>
+            <p style="color: var(--light-sage);">Calculate how much sod you need for your project</p>
+        </div>
+        <div class="calculator-container">
+            <h3>How Many Pallets Do You Need?</h3>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Enter your lawn dimensions to get an instant estimate</p>
+            
+            <div class="calculator-inputs">
+                <div class="calc-input-group">
+                    <label for="length">Length (feet)</label>
+                    <input type="number" id="length" placeholder="e.g., 50" min="1">
+                </div>
+                <div class="calc-input-group">
+                    <label for="width">Width (feet)</label>
+                    <input type="number" id="width" placeholder="e.g., 30" min="1">
+                </div>
+            </div>
+            
+            <button class="calculate-btn" onclick="calculateSod()">Calculate Sod Needed</button>
+            
+            <div class="calculator-result" id="result">
+                <div class="result-item">
+                    <span class="result-label">Total Area:</span>
+                    <span class="result-value" id="totalArea">0 sq ft</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Pallets Needed:</span>
+                    <span class="result-value" id="palletsNeeded">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Estimated Cost Range:</span>
+                    <span class="result-value" id="costEstimate">$0</span>
+                </div>
+            </div>
+            
+            <p style="text-align: center; color: #999; margin-top: 1.5rem; font-size: 0.9rem;">
+                <strong>Note:</strong> Each pallet covers approximately 450 sq ft. Prices vary by grass type.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Trusted by contractors and homeowners across South Florida</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Best landscaping supply in Parkland! Their sod is always fresh and the delivery is reliable. My clients love the results every time."</p>
+                <p class="testimonial-author">Michael Torres</p>
+                <p class="testimonial-role">Landscape Contractor</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The staff is incredibly knowledgeable and helped me choose the perfect plants for my yard. Great quality and fair prices!"</p>
+                <p class="testimonial-author">Sarah Johnson</p>
+                <p class="testimonial-role">Homeowner</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We've been using S & B for years. Consistent quality, competitive pricing, and they always deliver on time. Highly recommend!"</p>
+                <p class="testimonial-author">David Martinez</p>
+                <p class="testimonial-role">Property Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="service-area">
+        <div class="section-header">
+            <h2>Our Service Area</h2>
+            <p>Proudly serving South Florida communities with premium landscaping supplies</p>
+        </div>
+        <div class="cities-grid">
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Parkland</h4>
+                <p>Our Home Base</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Coral Springs</h4>
+                <p>Same-Day Delivery</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Coconut Creek</h4>
+                <p>Fast Delivery</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Boca Raton</h4>
+                <p>We Deliver Here</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Pompano Beach</h4>
+                <p>Regular Service</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Deerfield Beach</h4>
+                <p>We Deliver Here</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Margate</h4>
+                <p>Available Service</p>
+            </div>
+            <div class="city-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <h4>Tamarac</h4>
+                <p>We Deliver Here</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>Ready to start your landscaping project? Contact us today</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Address</h4>
+                        <p><a href="https://www.google.com/maps/dir/?api=1&destination=7100+Loxahatchee+Rd,+Parkland,+FL+33067" target="_blank" rel="noopener noreferrer" style="color: #666; text-decoration: none;">7100 Loxahatchee Rd<br>Parkland, FL 33067</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Phone</h4>
+                        <p><a href="tel:9542550440" style="color: #666; text-decoration: none;">(954) 255-0440</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Email</h4>
+                        <p><a href="mailto:HappySal@SBLandscapeSupply.com" style="color: #666; text-decoration: none;">HappySal@SBLandscapeSupply.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>Hours</h4>
+                        <p>Mon - Fri: 7:00 AM - 5:00 PM<br>Sat: 7:00 AM - 3:00 PM<br>Sun: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="project">Project Type</label>
+                    <select id="project" name="project">
+                        <option value="">Select a project type</option>
+                        <option value="sod">Sod Installation</option>
+                        <option value="mulch">Mulch & Soil</option>
+                        <option value="rocks">Decorative Rocks</option>
+                        <option value="plants">Plants & Trees</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Quote Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>S & B Landscaping Supply</h3>
+                <p>Your trusted source for premium landscaping materials in Parkland, Florida. Serving contractors and homeowners with quality products and exceptional service.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/SB-Landscaping-100071450238915/" target="_blank" rel="noopener noreferrer" aria-label="Visit us on Facebook">
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/snblandscapesupplies/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.google.com/maps/place/S+%26+B+Landscaping+Supply/@26.3006,-80.2414,17z/data=!3m1!4b1!4m6!3m5!1s0x88d9015c8d8d8d8d:0x1234567890abcdef!8m2!3d26.3006!4d-80.2414!16s%2Fg%2F1tds5qkj" target="_blank" rel="noopener noreferrer" aria-label="Find us on Google Maps">
+                        <svg viewBox="0 0 24 24" fill="white" width="20" height="20">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#products">Products & Services</a>
+                <a href="#about">About Us</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><strong>Phone:</strong><br><a href="tel:9542550440" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">(954) 255-0440</a></p>
+                <p><strong>Email:</strong><br><a href="mailto:HappySal@SBLandscapeSupply.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">HappySal@SBLandscapeSupply.com</a></p>
+                <p><strong>Address:</strong><br><a href="https://www.google.com/maps/dir/?api=1&destination=7100+Loxahatchee+Rd,+Parkland,+FL+33067" target="_blank" rel="noopener noreferrer" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">7100 Loxahatchee Rd<br>Parkland, FL 33067</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Products</h3>
+                <a href="#products">Fresh Sod & Grass</a>
+                <a href="#products">Mulch & Soil</a>
+                <a href="#products">Decorative Rocks</a>
+                <a href="#products">Plants & Trees</a>
+                <a href="#contact">Request a Quote</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 S & B Landscaping Supply. All rights reserved. | Family Owned Since 2002</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Floating Action Buttons -->
+    <div class="mobile-fab-container">
+        <a href="tel:9542550440" class="fab-button fab-call" aria-label="Call Now">
+            <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=7100+Loxahatchee+Rd,+Parkland,+FL+33067" target="_blank" class="fab-button fab-directions" aria-label="Get Directions">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Sod Calculator Function
+        function calculateSod() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            
+            // Validation
+            if (!length || !width || length <= 0 || width <= 0) {
+                alert('Please enter valid dimensions for both length and width.');
+                return;
+            }
+            
+            // Calculate total area
+            const totalArea = length * width;
+            
+            // Calculate pallets needed (450 sq ft per pallet, round up)
+            const palletsNeeded = Math.ceil(totalArea / 450);
+            
+            // Estimate cost (assume $150-$250 per pallet for range)
+            const minCost = palletsNeeded * 150;
+            const maxCost = palletsNeeded * 250;
+            
+            // Display results
+            document.getElementById('totalArea').textContent = totalArea.toLocaleString() + ' sq ft';
+            document.getElementById('palletsNeeded').textContent = palletsNeeded + ' pallets';
+            document.getElementById('costEstimate').textContent = '$' + minCost.toLocaleString() + ' - $' + maxCost.toLocaleString();
+            
+            // Show result container
+            const resultContainer = document.getElementById('result');
+            resultContainer.classList.add('show');
+            
+            // Smooth scroll to results
+            resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Allow Enter key to calculate
+        document.getElementById('length').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') calculateSod();
+        });
+        document.getElementById('width').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') calculateSod();
+        });
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your quote request! We will contact you shortly.');
+            event.target.reset();
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card, .benefit-item, .gallery-item, .testimonial-card, .city-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
